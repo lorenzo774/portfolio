@@ -1,0 +1,10 @@
+.big-element {
+    padding: 5em;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .big-element {
+        padding: 3em;
+    }
+}

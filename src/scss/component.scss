@@ -1,0 +1,33 @@
+.component {
+    padding: 2em;
+
+    h2 {
+        color: $fgcode;
+    }
+}
+
+.whoami,
+.projects,
+.other,
+.contactme {
+    @extend .component;
+}
+
+.whoami {
+    p {
+        margin: 3px;
+        padding: 10px;
+        background: $bgcode;
+        border-radius: 5px;
+
+        span {
+            color: $fgcode;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .component {
+        padding: 1.3em;
+    }
+}
