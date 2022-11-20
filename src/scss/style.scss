@@ -12,6 +12,16 @@ body {
     background-color: $bgcolor;
     color: $fgcolor;
     font-family: "Fira Code", monospace;
+    position: relative;
+}
+
+h1 {
+    font-size: 30px;
+    min-width: 200px;
+
+    span {
+        color: violet;
+    }
 }
 
 header {
@@ -25,7 +35,7 @@ main {
 }
 
 a {
-    color: green;
+    color: white;
     &:hover {
         color: greenyellow;
     }

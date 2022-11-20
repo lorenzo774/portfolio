@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (max-width: 600px) {
     .big-element {
         padding: 3em;
