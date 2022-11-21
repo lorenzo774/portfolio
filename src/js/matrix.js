@@ -1,8 +1,8 @@
 // Matrix effect
-const ms = 100;
+const ms = 200;
 const title = document.querySelector("#title");
-const titleText = title.textContent;
-const maxJapaneseCharacters = 3;
+const txt = title.textContent;
+const maxJapaneseCharacters = 2;
 const japaneseCharacters =
     "ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶ";
 
@@ -15,11 +15,16 @@ const setMatrixEffect = function () {
         const jpIndex = Math.floor(Math.random() * japaneseCharacters.length);
         rndChars.push(japaneseCharacters.at(jpIndex));
     }
-    const titleIndex = Math.floor(Math.random() * titleText.length);
+    const titleIndex = Math.floor(Math.random() * txt.length);
     const newTitle =
-        titleText.substring(0, titleIndex) +
-        `<span>${rndChars.join("")}</span>` +
-        titleText.substring(titleIndex + nJapaneseCharacters);
+        txt.substring(0, titleIndex) +
+        `${rndChars
+            .map((char) => {
+                const rndColor = Math.random() > 0.5 ? "#0f0" : "#090";
+                return `<span style="color: ${rndColor}">${char}</span>`;
+            })
+            .join("")}` +
+        txt.substring(titleIndex + nJapaneseCharacters);
     title.innerHTML = newTitle;
 };
 
