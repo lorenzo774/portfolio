@@ -54,7 +54,6 @@ const japaneseCharacters =
 const setMatrixEffect = function () {
     const nJapaneseCharacters =
         Math.floor(Math.random() * maxJapaneseCharacters) + 1;
-    console.log(nJapaneseCharacters);
     const rndChars = [];
     // Search for n jp characters\
     for (let i = 0; i < nJapaneseCharacters; i++) {
@@ -62,11 +61,11 @@ const setMatrixEffect = function () {
         rndChars.push(japaneseCharacters.at(jpIndex));
     }
     const titleIndex = Math.floor(Math.random() * titleText.length);
-    title.innerHTML =
-        titleText.substring(0, titleIndex - nJapaneseCharacters + 1) +
+    const newTitle =
+        titleText.substring(0, titleIndex) +
         `<span>${rndChars.join("")}</span>` +
         titleText.substring(titleIndex + nJapaneseCharacters);
-    console.log(title.textContent);
+    title.innerHTML = newTitle;
 };
 
 setInterval(setMatrixEffect, ms);
