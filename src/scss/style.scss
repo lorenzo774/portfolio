@@ -1,6 +1,7 @@
 @import "./variables.scss";
 @import "./utils.scss";
 @import "./component.scss";
+@import "./spinner.scss";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
 * {
@@ -18,10 +19,6 @@ body {
 h1 {
     font-size: 30px;
     min-width: 200px;
-
-    span {
-        color: violet;
-    }
 }
 
 header {
