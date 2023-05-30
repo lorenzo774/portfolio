@@ -2,8 +2,8 @@
 const ms = 200;
 const title = document.querySelector("#title");
 const txt = title.textContent;
-const maxJapaneseCharacters = 2;
-const japaneseCharacters =
+const maxJapaneseCharacters = 1;
+const hiragana =
     "ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶ";
 
 const setMatrixEffect = function () {
@@ -12,8 +12,8 @@ const setMatrixEffect = function () {
     const rndChars = [];
     // Search for n jp characters\
     for (let i = 0; i < nJapaneseCharacters; i++) {
-        const jpIndex = Math.floor(Math.random() * japaneseCharacters.length);
-        rndChars.push(japaneseCharacters.at(jpIndex));
+        const jpIndex = Math.floor(Math.random() * hiragana.length);
+        rndChars.push(hiragana.at(jpIndex));
     }
     const titleIndex = Math.floor(Math.random() * txt.length);
     const newTitle =
